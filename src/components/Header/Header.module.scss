@@ -1,0 +1,35 @@
+.headerBlock {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f91318;
+  height: 10vh;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+  }
+
+  h3 {
+    letter-spacing: 3em;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffb296;
+    font-family: 'Montserrat light', sans-serif;
+
+
+    &:hover {
+      color: #fffff6;
+    }
+  }
+}
+
+
+//h3 {
+//  letter-spacing: 3em;
+//  font-weight: bold;
+//  font-size: 20px;
+//  color: #f2b9bc;
+//  font-family: 'Montserrat light', sans-serif
+//}
+

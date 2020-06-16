@@ -1,0 +1,32 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f91318;
+
+  .container {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .iconNetwork {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    h4 {
+      color: #ffb296;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: lighter;
+    }
+  }
+}

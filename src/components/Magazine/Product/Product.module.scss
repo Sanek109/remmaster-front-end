@@ -1,0 +1,28 @@
+.wrapperProduct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  img {
+    width: 150px;
+    height: 150px;
+  }
+  .imageDescriptionProduct {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+  }
+  .imgProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .descriptionProduct {
+    margin-left: 10px;
+  }
+  .priceProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}

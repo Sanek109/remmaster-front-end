@@ -1,0 +1,14 @@
+.mainDescriptionText {
+  font-family: 'Montserrat light', sans-serif;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  p {
+    font-size: 20px;
+  }
+  ul > li {
+    font-size: 20px;
+  }
+}
