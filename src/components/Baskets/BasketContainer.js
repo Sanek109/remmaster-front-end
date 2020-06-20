@@ -1,8 +1,7 @@
 import {connect} from "react-redux";
 import Baskets from "./Baskets";
 import {
-    addQuantityProductToBasket,
-    deleteAllBasket, deleteProductInBasket,
+    addQuantityProductToBasket, deleteAllProductsBasket, deleteProductInBasket,
     removeQuantityProductToBasket
 } from "../../redux/basketReducer";
 
@@ -19,7 +18,7 @@ let mapDispatchToProps = (dispatch) => {
             dispatch(deleteProductInBasket(id, amountPrice))
         },
         deleteToBasket: () => {
-            dispatch(deleteAllBasket())
+            dispatch(deleteAllProductsBasket())
         },
         addQuantityToProduct: (id, price) => {
             dispatch(addQuantityProductToBasket(id, price))

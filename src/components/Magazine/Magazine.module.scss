@@ -1,11 +1,23 @@
 .wrapperProducts {
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+
+  .searchFormProduct {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+
+    Button {
+      height: 40px;
+      background-color: #f91318;
+    }
+  }
 
   .products {
     display: flex;
     flex-direction: column;
+
   }
 }

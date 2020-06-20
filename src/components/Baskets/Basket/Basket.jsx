@@ -1,7 +1,17 @@
 import React, {useState} from 'react';
+import Button from '@material-ui/core/Button';
 import s from './Basket.module.scss'
+import {makeStyles} from "@material-ui/core/styles";
+import DeleteIcon from '@material-ui/icons/Delete';
+
+const useStyles = makeStyles((theme) => ({
+    button: {
+        margin: theme.spacing(1)
+    },
+}));
 
 const Basket = (props) => {
+    const classes = useStyles();
 
     const [btnDisabled, setBtnDisabled] = useState(true)
     const [amountMoney, setAmountMoney] = useState(0);
@@ -27,6 +37,7 @@ const Basket = (props) => {
     }
 
     return <div>
+        <hr/>
         <div className={s.basketWrapper}>
             <div className={s.imageProduct}>
                 <img src={props.image} alt="Картинка товара"/>
@@ -34,17 +45,24 @@ const Basket = (props) => {
             <div className={s.nameProduct}>
                 <h3>{props.name}</h3>
                 <div className={s.quantityProduct}>
-                    <button disabled={btnDisabled} onClick={removeQuantityProduct}>-</button>
-                    <span>{props.quantity}</span>
-                    <button onClick={addQuantityProduct}>+</button>
+                    <button variant="outlined" color="secondary" disabled={btnDisabled} onClick={removeQuantityProduct}><span>-</span></button>
+                    <h3>{props.quantity}</h3>
+                    <button variant="outlined" color="secondary" onClick={addQuantityProduct}><span>+</span></button>
                 </div>
             </div>
             <div className={s.priceBtnProduct}>
-                <h4>{props.price} руб.</h4>
-                <button onClick={deleteProduct}>Удалить из корзины</button>
+                <h3>Цена: {props.price} руб.</h3>
+                <Button
+                    variant="contained"
+                    color="secondary"
+                    className={classes.button}
+                    startIcon={<DeleteIcon />}
+                    onClick={deleteProduct}
+                >
+                    Удалить
+                </Button>
             </div>
         </div>
-        <hr/>
     </div>
 }
 

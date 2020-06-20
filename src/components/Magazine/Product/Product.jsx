@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import s from './Product.module.scss'
+import React from 'react';
+import s from './Product.module.scss';
+import Button from '@material-ui/core/Button';
+
 
 let Product = (props) => {
-    let [isBasket, setIsBasket] = useState(false);
 
     let addProductInBasket = () => {
         props.addProductBasket(props.prod)
-        setIsBasket(true)
     }
 
     return (<div >
@@ -21,10 +21,10 @@ let Product = (props) => {
                 </div>
             </div>
             <div className={s.priceProduct}>
-                <h4>{props.price} р.</h4>
-                {!isBasket ?
-                    <button onClick={addProductInBasket}>В корзину</button> :
-                    <div>В корзине</div>
+                <h4>{props.price} руб.</h4>
+                {!props.isBasket ?
+                    <Button variant="contained" color="secondary" onClick={addProductInBasket}>В корзину</Button> :
+                    <div className={s.addToBasket}>В КОРЗИНЕ</div>
                 }
             </div>
         </div>

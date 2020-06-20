@@ -1,0 +1,15 @@
+.wrapperBaskets {
+  .headerBasket {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    h2 {
+      font-family: 'Montserrat bold', sans-serif;
+    }
+    Button {
+      background-color: #f91318;
+      font-family: 'Montserrat bold', sans-serif;;
+    }
+  }
+
+}

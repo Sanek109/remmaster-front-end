@@ -1,18 +1,18 @@
 import Magazine from "./Magazine";
 import {connect} from "react-redux";
-import {addProductToBasket} from '../../redux/basketReducer';
+import {addToProductBasketThunk} from '../../redux/basketReducer';
 import {searchProductToCategory} from "../../redux/productsReducer";
 
 let mapStateToProps = (state) => {
     return {
-        products: state.productsReducer.products
+        products: state.productsReducer.copyProducts
     }
 }
 
 let mapDispatchToProps = (dispatch) => {
     return {
         addProductBasket: (product) => {
-            dispatch(addProductToBasket(product))
+            dispatch(addToProductBasketThunk(product))
         },
         searchProductCategory: (category) => {
             dispatch(searchProductToCategory(category))

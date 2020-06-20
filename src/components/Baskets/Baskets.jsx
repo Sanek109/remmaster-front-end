@@ -1,7 +1,19 @@
 import React, {useState} from 'react';
 import Basket from "./Basket/Basket";
+import s from './Baskets.module.scss';
+import Button from "@material-ui/core/Button";
+import {makeStyles} from "@material-ui/core/styles";
+import DeleteIcon from "@material-ui/icons/Delete";
+
+const useStyles = makeStyles((theme) => ({
+    button: {
+        margin: theme.spacing(1)
+    },
+}));
 
 const Baskets = (props) => {
+    const classes = useStyles();
+
     let deleteProductsToBasket = () => {
         props.deleteToBasket()
     }
@@ -17,12 +29,12 @@ const Baskets = (props) => {
         addQuantityToProduct={props.addQuantityToProduct}
         removeQuantityToProduct={props.removeQuantityToProduct}
     />)
-    return (<div>
-        {!props.basket.length ? <h3>Ваша корзина пуста</h3> :
-        <div>
-            <span>Цена за всё: {props.priceAll} руб.</span>
-            <button onClick={deleteProductsToBasket}>Очистить корзину</button>
-            <button>Сделать заказ</button>
+    return (<div className={s.wrapperBaskets}>
+        {!props.basket.length ? <h2>Ваша корзина пуста</h2> :
+        <div className={s.headerBasket}>
+            <h3>Цена за всё: {props.priceAll} руб.</h3>
+            <Button variant="contained" color="secondary" className={classes.button}>заказать</Button>
+            <Button variant="contained" color="secondary" className={classes.button} startIcon={<DeleteIcon />} onClick={deleteProductsToBasket}>Очистить корзину</Button>
         </div>}
         <div>{basket}</div>
     </div>)

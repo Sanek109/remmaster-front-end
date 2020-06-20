@@ -8,16 +8,16 @@ let Footer = () => {
     return (
         <div className={s.footer}>
             <div className={s.container}>
-                <div><h4>РЕММАСТЕР</h4></div>
+                <div><h3>РЕММАСТЕР</h3></div>
                 <div className={s.iconNetwork}>
-                    <a href='https://vk.com/audiquattro2000' target="_blank">
+                    <a href='https://vk.com/bobr_remont_telefonov_remmaste7' target="_blank">
                         <img src={vk} alt='vk'/>
                     </a>
-                    <a href='https://www.instagram.com/alexreactredux/' target='_blank'>
+                    <a href='https://www.instagram.com/remmaster_bobruisk/' target='_blank'>
                         <img src={instagram} alt='instagram'/>
                     </a>
                 </div>
-                <div><h4>© 2020 Все права защищены</h4></div>
+                <div><h3>© 2020 ВСЕ ПРАВА ЗАЩИЩЕНЫ</h3></div>
             </div>
         </div>
     );

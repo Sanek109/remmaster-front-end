@@ -4,6 +4,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  h3 {
+    font-family: 'Montserrat bold', sans-serif;
+  }
 
   .imageProduct {
     img {
@@ -15,12 +18,38 @@
   .nameProduct {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     .quantityProduct {
+      width: 100px;
       display: flex;
-
+      flex-direction: row;
       justify-content: space-between;
-      width: 70px;
+      align-items: center;
+
+      button {
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;
+        background-color: #f91318;
+        border: 1px solid black;
+        span {
+          color: #fffff6;
+          font-weight: bolder;
+          font-size: 20px;
+        }
+      }
+
+      h3 {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .priceBtnProduct {
+    Button {
+      background-color: #f91318;
     }
   }
 }

@@ -24,5 +24,19 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
+    font-family: 'Montserrat light', sans-serif;
+    Button {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f91318;
+    }
+    .addToBasket {
+      font-weight: bolder;
+      border-radius: 3px;
+      font-family: 'Montserrat light', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #f91318;
+    }
   }
 }

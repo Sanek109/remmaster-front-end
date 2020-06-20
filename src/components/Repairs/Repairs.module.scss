@@ -1,0 +1,41 @@
+.wrapperRepairs {
+  .titleRepairs {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat light', sans-serif;;
+  }
+  Button {
+    background-color: #f91318;
+    margin-right: 15px;
+  }
+  .buttonsAndSearchForm{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .searchForm {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  table {
+    background-color: #ffb296;
+    thead {
+      background-color: #f91318;
+    }
+
+    h2 {
+      font-family: 'Montserrat light', sans-serif;
+      color: #fffff6;
+    }
+
+    h4 {
+      font-family: 'Montserrat light', sans-serif;
+      font-size: 1.15em;
+    }
+  }
+}

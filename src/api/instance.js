@@ -1,7 +1,7 @@
 import * as axios from "axios";
 
 const instance = axios.create({
-    baseURL: '/api/products',
+    baseURL: '/api',
     withCredentials: true,
     responseType: 'json'
 })

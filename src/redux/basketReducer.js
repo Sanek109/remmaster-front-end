@@ -1,3 +1,5 @@
+import {changeIsBasketProductThunk, clearIsBasketCopyProduct} from "./productsReducer";
+
 const ADD_PRODUCT_IN_BASKET = 'ADD_PRODUCT_IN_BASKET';
 const DELETE_PRODUCT_TO_BASKET = 'DELETE_PRODUCT_TO_BASKET';
 const DELETE_ALL_PRODUCTS = 'DELETE_ALL_PRODUCTS';
@@ -123,10 +125,25 @@ export const deleteProductPrice = (amountPrice) => {
     }
 }
 
+export const addToProductBasketThunk = (prod) => {
+    return async (dispatch) => {
+        dispatch(changeIsBasketProductThunk(prod._id))
+        dispatch(addProductToBasket(prod))
+    }
+}
+
 export const deleteProductInBasket = (id, amountPrice) => {
     return async (dispatch) => {
+        dispatch(changeIsBasketProductThunk(id))
         dispatch(deleteProduct(id))
         dispatch(deleteProductPrice(amountPrice))
+    }
+}
+
+export const deleteAllProductsBasket = () => {
+    return (dispatch) => {
+        dispatch(deleteAllBasket())
+        dispatch(clearIsBasketCopyProduct())
     }
 }
 

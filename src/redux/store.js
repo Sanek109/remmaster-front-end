@@ -3,10 +3,12 @@ import thunkMiddleware from 'redux-thunk';
 import {reducer as formReducer} from 'redux-form';
 import productsReducer from "./productsReducer";
 import basketReducer from "./basketReducer";
+import repairsReducer from "./repairsReducer";
 
 let reducers = combineReducers({
     productsReducer,
     basketReducer,
+    repairsReducer,
     form: formReducer
 })
 

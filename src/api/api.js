@@ -2,9 +2,16 @@ import instance from './instance';
 
 export const productsApi = {
     getProducts() {
-        return instance.get('/');
+        return instance.get('/products/');
+    }
+}
+
+export const repairsApi = {
+    getRepairs() {
+        return instance.get('/repairs');
     },
-    getSearchProduct(value) {
-        return instance.get(`/search?select=category&value=${value}`)
+    getSearchRepairs(repairs, name) {
+        debugger
+        return instance.get(`/repairs/search/repair?repairs=${repairs}&name=${name}`)
     }
 }
