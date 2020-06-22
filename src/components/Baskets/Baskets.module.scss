@@ -2,7 +2,11 @@
   .headerBasket {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    .priceBtn {
+      display: flex;
+      flex-direction: row;
+    }
     h2 {
       font-family: 'Montserrat bold', sans-serif;
     }

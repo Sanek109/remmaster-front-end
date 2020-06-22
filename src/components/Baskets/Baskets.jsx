@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Basket from "./Basket/Basket";
 import s from './Baskets.module.scss';
 import Button from "@material-ui/core/Button";
@@ -32,8 +32,10 @@ const Baskets = (props) => {
     return (<div className={s.wrapperBaskets}>
         {!props.basket.length ? <h2>Ваша корзина пуста</h2> :
         <div className={s.headerBasket}>
-            <h3>Цена за всё: {props.priceAll} руб.</h3>
-            <Button variant="contained" color="secondary" className={classes.button}>заказать</Button>
+            <div className={s.priceBtn}>
+                <h3>Цена за всё: {props.priceAll} руб.</h3>
+                <Button variant="contained" color="secondary" className={classes.button}>заказать</Button>
+            </div>
             <Button variant="contained" color="secondary" className={classes.button} startIcon={<DeleteIcon />} onClick={deleteProductsToBasket}>Очистить корзину</Button>
         </div>}
         <div>{basket}</div>
